@@ -98,7 +98,7 @@ module Chunker
 
     # Extract patterns like (DT)? -- (JJ.*)*
     def prepare_pattern(pattern)
-      pattern.scan(/(\([^\)]+\)[^\(]?)/).flatten.map { |x| TagPattern.new(x) }.reverse
+      pattern.scan(/(\<[^\>]+\>[^\<]?)/).flatten.map { |x| TagPattern.new(x) }.reverse
     end
 
   end

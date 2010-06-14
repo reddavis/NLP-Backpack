@@ -4,7 +4,7 @@ require 'nlp_backpack/chunkers/tag_pattern'
 describe Chunker::TagPattern do
   describe "Tag" do
     before do
-      @tp = Chunker::TagPattern.new("(NN)")
+      @tp = Chunker::TagPattern.new("<NN>")
     end
 
     it "should return the tag as NN" do
@@ -14,7 +14,7 @@ describe Chunker::TagPattern do
 
   describe "Tag with condition" do
     before do
-      @tp = Chunker::TagPattern.new("(NN*)")
+      @tp = Chunker::TagPattern.new("<NN*>")
     end
 
     it "should return the tag as NN*" do
@@ -24,7 +24,7 @@ describe Chunker::TagPattern do
 
   describe "Tag with external condition" do
     before do
-      @tp = Chunker::TagPattern.new("(NN.+)?")
+      @tp = Chunker::TagPattern.new("<NN.+>?")
     end
 
     it "should return the tag as NN" do
