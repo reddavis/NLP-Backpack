@@ -53,7 +53,7 @@ module Chunker
       end
 
       @current_pattern = case state
-      when :start
+      when :start, :next
         @pattern.pop
       when :matched
         if ["+", "*"].include?(@current_pattern.conditions)
@@ -71,8 +71,6 @@ module Chunker
           pop_potential_pattern!
           next_pattern(:start)
         end
-      when :next
-        @pattern.pop
       end
     end
 
