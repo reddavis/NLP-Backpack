@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/tokenizers/word'
 
+include NLPBackpack
+
 describe Tokenizer::Word do
   it "should split text by words" do
     a = Tokenizer::Word.tokenize(text)

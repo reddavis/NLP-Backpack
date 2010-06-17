@@ -1,28 +1,32 @@
 # A POSArray holds the words and pos tags for a sentence
 
-module POS
-  class InvalidSentence < Exception; end;
+module NLPBackpack
 
-  class POSArray < Array
+  module POS
+    class InvalidSentence < Exception; end;
 
-    def <<(values)
-      validate_sentence(values)
-      super
-    end
+    class POSArray < Array
 
-    def append(word, pos)
-      self << [word, pos]
-    end
+      def <<(values)
+        validate_sentence(values)
+        super
+      end
 
-    # Turn into word/pos
-    def to_s
-      map {|word| word.join("/") }.join(" ")
-    end
+      def append(word, pos)
+        self << [word, pos]
+      end
 
-    private
+      # Turn into word/pos
+      def to_s
+        map {|word| word.join("/") }.join(" ")
+      end
 
-    def validate_sentence(value)
-      raise InvalidSentence("Adding words needs to be structured like: [word, pos]") unless value.size == 2
+      private
+
+      def validate_sentence(value)
+        raise InvalidSentence("Adding words needs to be structured like: [word, pos]") unless value.size == 2
+      end
     end
   end
+
 end

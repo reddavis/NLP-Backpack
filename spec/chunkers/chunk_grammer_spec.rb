@@ -2,6 +2,8 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/chunkers/chunk_grammer'
 require 'nlp_backpack/pos/pos_array'
 
+include NLPBackpack
+
 describe Chunker::ChunkGrammer do
   describe "Matching specified chunks" do
     before do

@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/tokenizers/tab'
 
+include NLPBackpack
+
 describe Tokenizer::Tab do
   it "should split text by single tabs" do
     a = Tokenizer::Tab.tokenize(text)

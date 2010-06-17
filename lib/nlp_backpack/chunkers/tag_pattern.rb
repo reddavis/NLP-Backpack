@@ -1,27 +1,31 @@
-module Chunker
-  class TagPattern
+module NLPBackpack
 
-    attr_reader :tag, :conditions
+  module Chunker
+    class TagPattern
 
-    # Example inputs:
-    # <DT>?
-    # <JJ.*>*
-    def initialize(pattern)
-      extract_tag_and_options(pattern)
-    end
+      attr_reader :tag, :conditions
 
-    private
-
-    # TODO Make this work for strings wrapped in " " as well as ' '
-    def extract_tag_and_options(pattern)
-      if match = pattern.match(/\<([^\>]+)\>/)
-        @tag = /#{match[1]}/
+      # Example inputs:
+      # <DT>?
+      # <JJ.*>*
+      def initialize(pattern)
+        extract_tag_and_options(pattern)
       end
 
-      if match = pattern.match(/\<[^\>]+\>(.)/)
-        @conditions = match[1]
-      end
-    end
+      private
 
+      # TODO Make this work for strings wrapped in " " as well as ' '
+      def extract_tag_and_options(pattern)
+        if match = pattern.match(/\<([^\>]+)\>/)
+          @tag = /#{match[1]}/
+        end
+
+        if match = pattern.match(/\<[^\>]+\>(.)/)
+          @conditions = match[1]
+        end
+      end
+
+    end
   end
+
 end

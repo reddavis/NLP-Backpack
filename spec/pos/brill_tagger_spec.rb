@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/pos/brill_tagger'
 
+include NLPBackpack
+
 describe POS::BrillTagger do
   before(:all) do
     @pos = POS::BrillTagger.analyze(text)

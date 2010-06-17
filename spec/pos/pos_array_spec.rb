@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/pos/pos_array'
 
+include NLPBackpack
+
 describe POS::POSArray do
   before do
     @pos_a = POS::POSArray.new

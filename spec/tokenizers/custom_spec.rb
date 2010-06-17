@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/tokenizers/custom'
 
+include NLPBackpack
+
 describe Tokenizer::Custom do
   describe "split by ands" do
     it "should return 3" do

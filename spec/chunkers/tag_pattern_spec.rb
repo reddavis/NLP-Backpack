@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'nlp_backpack/chunkers/tag_pattern'
 
+include NLPBackpack
+
 describe Chunker::TagPattern do
   describe "Tag" do
     before do

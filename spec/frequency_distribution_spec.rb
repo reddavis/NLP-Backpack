@@ -1,6 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'nlp_backpack/frequency_distribution'
 
+include NLPBackpack
+
 describe FrequencyDistribution do
   before do
     conditions = {:happy => happy_text, :sad => sad_text}
