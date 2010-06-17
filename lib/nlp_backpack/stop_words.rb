@@ -2,7 +2,7 @@ module NLPBackpack
 
   class StopWords
     class << self
-      def words
+      def all
         File.read(stop_word_path).split("\n")
       end
 

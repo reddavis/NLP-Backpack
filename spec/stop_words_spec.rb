@@ -4,7 +4,7 @@ require 'nlp_backpack/stop_words'
 include NLPBackpack
 
 describe StopWords do
-  before(:all) { @stop_words = StopWords.words }
+  before(:all) { @stop_words = StopWords.all }
 
   it "should return z" do
     @stop_words.last.should == "z"
