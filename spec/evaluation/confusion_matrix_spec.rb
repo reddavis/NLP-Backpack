@@ -26,7 +26,6 @@ describe ConfusionMatrix do
     end
 
     it "should match 10.0%" do
-      puts @cm.inspect
       @cm.inspect.should match(/10.0%/)
     end
   end

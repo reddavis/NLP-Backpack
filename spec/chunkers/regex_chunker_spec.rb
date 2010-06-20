@@ -1,10 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
-require 'nlp_backpack/chunkers/chunk_grammer'
+require 'nlp_backpack/chunkers/regex_chunker'
 require 'nlp_backpack/pos/pos_array'
 
 include NLPBackpack
 
-describe Chunker::ChunkGrammer do
+describe Chunker::RegexChunker do
   describe "Matching specified chunks" do
     before do
       @pos_a = POS::POSArray.new
@@ -13,20 +13,20 @@ describe Chunker::ChunkGrammer do
 
     describe "Simple chunk" do
       it "should return 'this is some text'" do
-        grammer = Chunker::ChunkGrammer.new("<DT><VBZ><DT><NN>")
+        grammer = Chunker::RegexChunker.new("<DT><VBZ><DT><NN>")
         grammer.match(@pos_a).first.should == "this is some text"
       end
     end
 
     describe "Chunk with conditional tag" do
       it "should return 'this is some text'" do
-        grammer = Chunker::ChunkGrammer.new("<DT><VBZ>?<DT>")
+        grammer = Chunker::RegexChunker.new("<DT><VBZ>?<DT>")
         grammer.match(@pos_a)[0].should == "this is some"
         grammer.match(@pos_a)[1].should == "this some"
       end
 
       it "should return 'this is some text'" do
-        grammer = Chunker::ChunkGrammer.new("<DT><VBZ>*<DT>")
+        grammer = Chunker::RegexChunker.new("<DT><VBZ>*<DT>")
         grammer.match(@pos_a)[0].should == "this is some"
         grammer.match(@pos_a)[1].should == "this some"
       end
@@ -34,7 +34,7 @@ describe Chunker::ChunkGrammer do
 
     describe "Chunk with tag regex" do
       it "should return 'this is some text'" do
-        grammer = Chunker::ChunkGrammer.new('<D\w><VBZ>?<DT>')
+        grammer = Chunker::RegexChunker.new('<D\w><VBZ>?<DT>')
         grammer.match(@pos_a)[0].should == "this is some"
         grammer.match(@pos_a)[1].should == "this some"
       end

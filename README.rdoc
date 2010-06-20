@@ -7,3 +7,13 @@ VERY ALPHA
 == TODO
 
 * Lots
+
+Chunkers
+* IOB tags
+* Tree structure
+* Unigram Chunker
+
+Data
+
+Evaluations
+* F Score

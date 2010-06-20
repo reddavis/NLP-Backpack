@@ -10,7 +10,7 @@ module NLPBackpack
   module Chunker
     class Retry < Exception; end;
 
-    class ChunkGrammer
+    class RegexChunker
 
       def initialize(pattern)
         @pattern = prepare_pattern(pattern)
