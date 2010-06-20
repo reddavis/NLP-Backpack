@@ -22,7 +22,7 @@ module NLPBackpack
 
           # Calculate %
           results.each do |k, v|
-            results[k] = "#{(v / results_count) * 100}%"
+            results[k] = "#{(v / results_count).round * 100}%"
           end
 
           results
