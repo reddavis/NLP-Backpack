@@ -24,8 +24,18 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/nlp_backpack.rb",
+     "lib/nlp_backpack/chunker.rb",
+     "lib/nlp_backpack/chunker/regex_chunker.rb",
+     "lib/nlp_backpack/chunker/tag_pattern.rb",
+     "lib/nlp_backpack/classifier.rb",
+     "lib/nlp_backpack/classifier/base.rb",
+     "lib/nlp_backpack/classifier/naive_bayes.rb",
+     "lib/nlp_backpack/evaluation.rb",
+     "lib/nlp_backpack/evaluation/accuracy.rb",
+     "lib/nlp_backpack/evaluation/base.rb",
      "lib/nlp_backpack/evaluation/confusion_matrix.rb",
      "lib/nlp_backpack/frequency_distribution.rb",
+     "lib/nlp_backpack/pos.rb",
      "lib/nlp_backpack/pos/brill_tagger.rb",
      "lib/nlp_backpack/pos/brill_tagger/lexicon.txt",
      "lib/nlp_backpack/pos/pos_array.rb",
@@ -41,6 +51,7 @@ Gem::Specification.new do |s|
      "spec/chunkers/regex_chunker_spec.rb",
      "spec/chunkers/tag_pattern_spec.rb",
      "spec/classifiers/naive_bayes_spec.rb",
+     "spec/evaluation/accuracy_spec.rb",
      "spec/evaluation/confusion_matrix_spec.rb",
      "spec/frequency_distribution_spec.rb",
      "spec/nlp_backpack_spec.rb",
@@ -55,7 +66,8 @@ Gem::Specification.new do |s|
      "spec/tokenizers/space_spec.rb",
      "spec/tokenizers/tab_spec.rb",
      "spec/tokenizers/whitespace_spec.rb",
-     "spec/tokenizers/word_spec.rb"
+     "spec/tokenizers/word_spec.rb",
+     "test.rb"
   ]
   s.homepage = %q{http://github.com/reddavis/NLP-Backpack}
   s.rdoc_options = ["--charset=UTF-8"]
