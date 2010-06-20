@@ -1,5 +1,4 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
-require 'nlp_backpack/chunkers/regex_chunker'
 require 'nlp_backpack/pos/pos_array'
 
 include NLPBackpack

@@ -1,32 +1,29 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
-require 'nlp_backpack/evaluation/confusion_matrix'
 
 include NLPBackpack::Evaluation
 
 describe ConfusionMatrix do
   before(:all) do
-    correct = [1,1,2,1,1,1,1,1,1,1]
-    test    = [1,1,3,1,1,1,1,1,1,1]
-    @cm = ConfusionMatrix.new(correct, test)
+    @cm = ConfusionMatrix.new(correct_results, test_results)
   end
 
   describe "Specific element" do
-    it "should return 90.0%" do
-      @cm.results_for(1, 1).should == "90.0%"
+    it "should return 90%" do
+      @cm.results_for(1, 1).should == "90%"
     end
 
-    it "should return 10.0%" do
-      @cm.results_for(2, 3).should == "10.0%"
+    it "should return 10%" do
+      @cm.results_for(2, 3).should == "10%"
     end
   end
 
   describe "Inspect" do
-    it "should match <90.0%>" do
-      @cm.inspect.should match(/<90.0%>/)
+    it "should match <90%>" do
+      @cm.inspect.should match(/<90%>/)
     end
 
-    it "should match 10.0%" do
-      @cm.inspect.should match(/10.0%/)
+    it "should match 10%" do
+      @cm.inspect.should match(/10%/)
     end
   end
 end

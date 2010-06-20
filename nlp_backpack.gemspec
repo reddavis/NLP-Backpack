@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["reddavis"]
-  s.date = %q{2010-06-20}
+  s.date = %q{2010-06-21}
   s.description = %q{A backpack full of useful toys}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
@@ -24,10 +24,6 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/nlp_backpack.rb",
-     "lib/nlp_backpack/chunkers/chunk_grammer.rb",
-     "lib/nlp_backpack/chunkers/tag_pattern.rb",
-     "lib/nlp_backpack/classifiers/base.rb",
-     "lib/nlp_backpack/classifiers/naive_bayes.rb",
      "lib/nlp_backpack/evaluation/confusion_matrix.rb",
      "lib/nlp_backpack/frequency_distribution.rb",
      "lib/nlp_backpack/pos/brill_tagger.rb",
@@ -41,7 +37,8 @@ Gem::Specification.new do |s|
      "lib/nlp_backpack/tokenizers/tab.rb",
      "lib/nlp_backpack/tokenizers/whitespace.rb",
      "lib/nlp_backpack/tokenizers/word.rb",
-     "spec/chunkers/chunk_grammer_spec.rb",
+     "nlp_backpack.gemspec",
+     "spec/chunkers/regex_chunker_spec.rb",
      "spec/chunkers/tag_pattern_spec.rb",
      "spec/classifiers/naive_bayes_spec.rb",
      "spec/evaluation/confusion_matrix_spec.rb",
@@ -66,9 +63,10 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{A backpack full of useful toys}
   s.test_files = [
-    "spec/chunkers/chunk_grammer_spec.rb",
+    "spec/chunkers/regex_chunker_spec.rb",
      "spec/chunkers/tag_pattern_spec.rb",
      "spec/classifiers/naive_bayes_spec.rb",
+     "spec/evaluation/accuracy_spec.rb",
      "spec/evaluation/confusion_matrix_spec.rb",
      "spec/frequency_distribution_spec.rb",
      "spec/nlp_backpack_spec.rb",

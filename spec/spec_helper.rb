@@ -8,3 +8,11 @@ require 'spec/autorun'
 Spec::Runner.configure do |config|
 
 end
+
+def correct_results
+  [1,1,2,1,1,1,1,1,1,1]
+end
+
+def test_results
+  [1,1,3,1,1,1,1,1,1,1]
+end
