@@ -10,7 +10,7 @@ module NLPBackpack
       @results ||= calculate_cfd
     end
 
-    def to_tabulation
+    def inspect
       data = "\t#{@events.join("\t")}\n"
 
       process.each_pair do |condition, events|

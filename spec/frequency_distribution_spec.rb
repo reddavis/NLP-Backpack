@@ -35,7 +35,7 @@ describe FrequencyDistribution do
 
   describe "Tabulation" do
     it "should include the events" do
-      table = @cfd.to_tabulation
+      table = @cfd.inspect
       table.should match(/happy/)
       table.should match(/sad/)
     end
