@@ -5,7 +5,7 @@ module NLPBackpack
 
     class ConfusionMatrix < Base
       def inspect
-        output = ""
+        output = "rows: correct results; cols: test results\n\n"
         output << "\t" + all_unique_results.map {|x| "#{x}"}.join("\t") + "\n"
 
         all_unique_results.each do |correct_result|
