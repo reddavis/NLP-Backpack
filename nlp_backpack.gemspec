@@ -66,8 +66,7 @@ Gem::Specification.new do |s|
      "spec/tokenizers/space_spec.rb",
      "spec/tokenizers/tab_spec.rb",
      "spec/tokenizers/whitespace_spec.rb",
-     "spec/tokenizers/word_spec.rb",
-     "test.rb"
+     "spec/tokenizers/word_spec.rb"
   ]
   s.homepage = %q{http://github.com/reddavis/NLP-Backpack}
   s.rdoc_options = ["--charset=UTF-8"]

@@ -1,12 +1,15 @@
 = NLP Backpack
 
-An NLTK like playground for Rubyists.
+An NLTK like playground for Rubyists. A notebook of my studies
 
-VERY ALPHA
+If a fish is a fish, what is a fish?
 
 == TODO
 
 * Lots
+
+Classifiers
+* Lots of them!
 
 Chunkers
 * IOB tags
