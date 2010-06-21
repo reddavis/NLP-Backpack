@@ -16,3 +16,12 @@ end
 def test_results
   [1,1,3,1,1,1,1,1,1,1]
 end
+
+module FeatureSelection
+  def self.data
+    {
+    :spam => [['this', 'is', 'this', 'some', 'yer', 'information'], ['this', 'is', 'something', 'that', 'is', 'information']],
+    :ham => [['this', 'test', 'some', 'more', 'information'], ['there', 'are', 'some', 'things']],
+    }
+  end
+end

@@ -7,4 +7,5 @@ module NLPBackpack
   autoload :StopWords, "nlp_backpack/stop_words"
   autoload :Chunker, "nlp_backpack/chunker"
   autoload :POS, "nlp_backpack/pos"
+  autoload :FeatureSelection, "nlp_backpack/feature_selection"
 end
