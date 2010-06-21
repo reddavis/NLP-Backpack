@@ -4,7 +4,7 @@ include NLPBackpack::Evaluation
 
 describe ConfusionMatrix do
   before(:all) do
-    @cm = ConfusionMatrix.new(correct_results, test_results)
+    @cm = ConfusionMatrix.new(Evaluation.correct_results, Evaluation.test_results)
   end
 
   describe "Specific element" do

@@ -9,12 +9,14 @@ Spec::Runner.configure do |config|
 
 end
 
-def correct_results
-  [1,1,2,1,1,1,1,1,1,1]
-end
+module Evaluation
+  def self.correct_results
+    [1,1,2,1,1,1,1,1,1,1]
+  end
 
-def test_results
-  [1,1,3,1,1,1,1,1,1,1]
+  def self.test_results
+    [1,1,3,1,1,1,1,1,1,1]
+  end
 end
 
 module FeatureSelection
