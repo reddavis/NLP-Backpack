@@ -1,6 +1,6 @@
 module NLPBackpack
 
-  class FrequencyDistribution
+  class ConditionalFrequencyDistribution
     def initialize(conditions, *events)
       @conditions = conditions
       @events = events

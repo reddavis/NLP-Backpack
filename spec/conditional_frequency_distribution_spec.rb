@@ -2,10 +2,10 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 include NLPBackpack
 
-describe FrequencyDistribution do
+describe ConditionalFrequencyDistribution do
   before do
     conditions = {:happy => happy_text, :sad => sad_text}
-    @cfd = FrequencyDistribution.new(conditions, "happy", "sad")
+    @cfd = ConditionalFrequencyDistribution.new(conditions, "happy", "sad")
     @results = @cfd.process
   end
 
