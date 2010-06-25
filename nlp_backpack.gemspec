@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["reddavis"]
-  s.date = %q{2010-06-21}
+  s.date = %q{2010-06-25}
   s.description = %q{A backpack full of useful toys}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
@@ -30,11 +30,16 @@ Gem::Specification.new do |s|
      "lib/nlp_backpack/classifier.rb",
      "lib/nlp_backpack/classifier/base.rb",
      "lib/nlp_backpack/classifier/naive_bayes.rb",
+     "lib/nlp_backpack/conditional_frequency_distribution.rb",
      "lib/nlp_backpack/evaluation.rb",
      "lib/nlp_backpack/evaluation/accuracy.rb",
      "lib/nlp_backpack/evaluation/base.rb",
      "lib/nlp_backpack/evaluation/confusion_matrix.rb",
-     "lib/nlp_backpack/frequency_distribution.rb",
+     "lib/nlp_backpack/feature_selection.rb",
+     "lib/nlp_backpack/feature_selection/base.rb",
+     "lib/nlp_backpack/feature_selection/chi_squared.rb",
+     "lib/nlp_backpack/feature_selection/frequency.rb",
+     "lib/nlp_backpack/feature_selection/mutual_information.rb",
      "lib/nlp_backpack/pos.rb",
      "lib/nlp_backpack/pos/brill_tagger.rb",
      "lib/nlp_backpack/pos/brill_tagger/lexicon.txt",
@@ -51,9 +56,12 @@ Gem::Specification.new do |s|
      "spec/chunkers/regex_chunker_spec.rb",
      "spec/chunkers/tag_pattern_spec.rb",
      "spec/classifiers/naive_bayes_spec.rb",
+     "spec/conditional_frequency_distribution_spec.rb",
      "spec/evaluation/accuracy_spec.rb",
      "spec/evaluation/confusion_matrix_spec.rb",
-     "spec/frequency_distribution_spec.rb",
+     "spec/feature_selection/chi_squared_spec.rb",
+     "spec/feature_selection/frequency_spec.rb",
+     "spec/feature_selection/mutual_information_spec.rb",
      "spec/nlp_backpack_spec.rb",
      "spec/pos/brill_tagger_spec.rb",
      "spec/pos/pos_array_spec.rb",
@@ -77,9 +85,12 @@ Gem::Specification.new do |s|
     "spec/chunkers/regex_chunker_spec.rb",
      "spec/chunkers/tag_pattern_spec.rb",
      "spec/classifiers/naive_bayes_spec.rb",
+     "spec/conditional_frequency_distribution_spec.rb",
      "spec/evaluation/accuracy_spec.rb",
      "spec/evaluation/confusion_matrix_spec.rb",
-     "spec/frequency_distribution_spec.rb",
+     "spec/feature_selection/chi_squared_spec.rb",
+     "spec/feature_selection/frequency_spec.rb",
+     "spec/feature_selection/mutual_information_spec.rb",
      "spec/nlp_backpack_spec.rb",
      "spec/pos/brill_tagger_spec.rb",
      "spec/pos/pos_array_spec.rb",
