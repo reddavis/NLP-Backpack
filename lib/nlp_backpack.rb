@@ -9,4 +9,5 @@ module NLPBackpack
   autoload :POS, "nlp_backpack/pos"
   autoload :FeatureSelection, "nlp_backpack/feature_selection"
   autoload :TypeTokenRatio, "nlp_backpack/type_token_ratio"
+  autoload :Tokenizer, "nlp_backpack/tokenizer"
 end
