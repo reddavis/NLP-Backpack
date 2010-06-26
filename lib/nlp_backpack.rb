@@ -8,5 +8,5 @@ module NLPBackpack
   autoload :Chunker, "nlp_backpack/chunker"
   autoload :POS, "nlp_backpack/pos"
   autoload :FeatureSelection, "nlp_backpack/feature_selection"
-  autoload :LexicalDensity, "nlp_backpack/lexical_density"
+  autoload :TypeTokenRatio, "nlp_backpack/type_token_ratio"
 end

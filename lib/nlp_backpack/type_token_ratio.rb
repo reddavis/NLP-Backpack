@@ -3,7 +3,7 @@ require 'nlp_backpack/tokenizers/word'
 module NLPBackpack
 
   # number of unique words / number of words * 100
-  class LexicalDensity
+  class TypeTokenRatio
     class << self
       def analyze(text)
         new(text).result
@@ -12,7 +12,6 @@ module NLPBackpack
 
     def initialize(text)
       @text = prepare_text(text)
-      puts @text.inspect
     end
 
     def result

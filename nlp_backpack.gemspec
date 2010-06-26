@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["reddavis"]
-  s.date = %q{2010-06-25}
+  s.date = %q{2010-06-26}
   s.description = %q{A backpack full of useful toys}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
@@ -40,6 +40,7 @@ Gem::Specification.new do |s|
      "lib/nlp_backpack/feature_selection/chi_squared.rb",
      "lib/nlp_backpack/feature_selection/frequency.rb",
      "lib/nlp_backpack/feature_selection/mutual_information.rb",
+     "lib/nlp_backpack/lexical_density.rb",
      "lib/nlp_backpack/pos.rb",
      "lib/nlp_backpack/pos/brill_tagger.rb",
      "lib/nlp_backpack/pos/brill_tagger/lexicon.txt",
@@ -62,6 +63,7 @@ Gem::Specification.new do |s|
      "spec/feature_selection/chi_squared_spec.rb",
      "spec/feature_selection/frequency_spec.rb",
      "spec/feature_selection/mutual_information_spec.rb",
+     "spec/lexical_density_spec.rb",
      "spec/nlp_backpack_spec.rb",
      "spec/pos/brill_tagger_spec.rb",
      "spec/pos/pos_array_spec.rb",
@@ -91,6 +93,7 @@ Gem::Specification.new do |s|
      "spec/feature_selection/chi_squared_spec.rb",
      "spec/feature_selection/frequency_spec.rb",
      "spec/feature_selection/mutual_information_spec.rb",
+     "spec/lexical_density_spec.rb",
      "spec/nlp_backpack_spec.rb",
      "spec/pos/brill_tagger_spec.rb",
      "spec/pos/pos_array_spec.rb",
