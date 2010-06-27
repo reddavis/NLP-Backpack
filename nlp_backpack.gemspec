@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["reddavis"]
-  s.date = %q{2010-06-26}
+  s.date = %q{2010-06-27}
   s.description = %q{A backpack full of useful toys}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
@@ -47,12 +47,15 @@ Gem::Specification.new do |s|
      "lib/nlp_backpack/pos/pos_array.rb",
      "lib/nlp_backpack/stop_words.rb",
      "lib/nlp_backpack/stop_words/stop_words.txt",
+     "lib/nlp_backpack/tokenizer.rb",
      "lib/nlp_backpack/tokenizers/custom.rb",
      "lib/nlp_backpack/tokenizers/line.rb",
+     "lib/nlp_backpack/tokenizers/sentence.rb",
      "lib/nlp_backpack/tokenizers/space.rb",
      "lib/nlp_backpack/tokenizers/tab.rb",
      "lib/nlp_backpack/tokenizers/whitespace.rb",
      "lib/nlp_backpack/tokenizers/word.rb",
+     "lib/nlp_backpack/type_token_ratio.rb",
      "nlp_backpack.gemspec",
      "spec/chunkers/regex_chunker_spec.rb",
      "spec/chunkers/tag_pattern_spec.rb",
@@ -70,13 +73,14 @@ Gem::Specification.new do |s|
      "spec/spec.opts",
      "spec/spec_helper.rb",
      "spec/stop_words_spec.rb",
-     "spec/test_saves/naive.nb",
      "spec/tokenizers/custom_spec.rb",
      "spec/tokenizers/line_spec.rb",
+     "spec/tokenizers/sentence_spec.rb",
      "spec/tokenizers/space_spec.rb",
      "spec/tokenizers/tab_spec.rb",
      "spec/tokenizers/whitespace_spec.rb",
-     "spec/tokenizers/word_spec.rb"
+     "spec/tokenizers/word_spec.rb",
+     "spec/type_token_ratio_spec.rb"
   ]
   s.homepage = %q{http://github.com/reddavis/NLP-Backpack}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -101,10 +105,12 @@ Gem::Specification.new do |s|
      "spec/stop_words_spec.rb",
      "spec/tokenizers/custom_spec.rb",
      "spec/tokenizers/line_spec.rb",
+     "spec/tokenizers/sentence_spec.rb",
      "spec/tokenizers/space_spec.rb",
      "spec/tokenizers/tab_spec.rb",
      "spec/tokenizers/whitespace_spec.rb",
-     "spec/tokenizers/word_spec.rb"
+     "spec/tokenizers/word_spec.rb",
+     "spec/type_token_ratio_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
