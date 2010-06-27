@@ -10,4 +10,5 @@ module NLPBackpack
   autoload :FeatureSelection, "nlp_backpack/feature_selection"
   autoload :TypeTokenRatio, "nlp_backpack/type_token_ratio"
   autoload :Tokenizer, "nlp_backpack/tokenizer"
+  autoload :LexicalDensity, "nlp_backpack/lexical_density"
 end

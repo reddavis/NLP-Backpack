@@ -1,4 +1,5 @@
-require 'nlp_backpack/tokenizers/word'
+require 'nlp_backpack/tokenizer'
+require 'nlp_backpack/pos'
 
 module NLPBackpack
 
@@ -11,25 +12,25 @@ module NLPBackpack
     end
 
     def initialize(text)
-      @text = prepare_text(text)
+      count_tokens(text)
     end
 
     def result
-      (unique_words / total_words) * 100
+      (@lexical_tokens / @total_words) * 100
     end
 
     private
 
-    def unique_words
-      @unique_words ||= @text.uniq.size.to_f
-    end
+    # TODO: When we have multiple POS, make this customizable
+    def count_tokens(text)
+      @total_words = Tokenizer::Word.tokenize(text).size.to_f
 
-    def total_words
-      @text.size.to_f
-    end
+      @lexical_tokens = 0.0
+      Tokenizer::Sentence.tokenize(text).each do |sentence|
+        pos = POS::BrillTagger.analyze(sentence)
 
-    def prepare_text(text)
-      Tokenizer::Custom.tokenize(text)
+        @lexical_tokens += pos.delete_if {|x| x[1].match(/^[^N|^V|^R|^J]/)}.size
+      end
     end
   end
 
