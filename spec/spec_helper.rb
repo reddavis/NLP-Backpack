@@ -6,7 +6,9 @@ require 'spec'
 require 'spec/autorun'
 
 Spec::Runner.configure do |config|
-
+  config.before(:all) do
+    FileUtils.mkdir_p(File.expand_path(File.dirname(__FILE__) + "/test_saves"))
+  end
 end
 
 module Evaluation
