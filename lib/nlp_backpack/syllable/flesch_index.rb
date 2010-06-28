@@ -8,7 +8,7 @@ module NLPBackpack
     class FleschIndex
       class << self
         def analyze(*words)
-          new(*words).results
+          new(*words).process
         end
       end
 
@@ -16,7 +16,7 @@ module NLPBackpack
         @words = words
       end
 
-      def results
+      def process
         @results ||= calculate_syllables
       end
 
