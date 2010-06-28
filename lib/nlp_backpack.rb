@@ -11,4 +11,5 @@ module NLPBackpack
   autoload :TypeTokenRatio, "nlp_backpack/type_token_ratio"
   autoload :Tokenizer, "nlp_backpack/tokenizer"
   autoload :LexicalDensity, "nlp_backpack/lexical_density"
+  autoload :Syllable, "nlp_backpack/syllable"
 end
