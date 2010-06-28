@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["reddavis"]
-  s.date = %q{2010-06-27}
+  s.date = %q{2010-06-28}
   s.description = %q{A backpack full of useful toys}
   s.email = %q{reddavis@gmail.com}
   s.extra_rdoc_files = [
@@ -47,6 +47,8 @@ Gem::Specification.new do |s|
      "lib/nlp_backpack/pos/pos_array.rb",
      "lib/nlp_backpack/stop_words.rb",
      "lib/nlp_backpack/stop_words/stop_words.txt",
+     "lib/nlp_backpack/syllable.rb",
+     "lib/nlp_backpack/syllable/flesch_index.rb",
      "lib/nlp_backpack/tokenizer.rb",
      "lib/nlp_backpack/tokenizers/custom.rb",
      "lib/nlp_backpack/tokenizers/line.rb",
@@ -73,6 +75,7 @@ Gem::Specification.new do |s|
      "spec/spec.opts",
      "spec/spec_helper.rb",
      "spec/stop_words_spec.rb",
+     "spec/syllable/flesch_index_spec.rb",
      "spec/tokenizers/custom_spec.rb",
      "spec/tokenizers/line_spec.rb",
      "spec/tokenizers/sentence_spec.rb",
@@ -103,6 +106,7 @@ Gem::Specification.new do |s|
      "spec/pos/pos_array_spec.rb",
      "spec/spec_helper.rb",
      "spec/stop_words_spec.rb",
+     "spec/syllable/flesch_index_spec.rb",
      "spec/tokenizers/custom_spec.rb",
      "spec/tokenizers/line_spec.rb",
      "spec/tokenizers/sentence_spec.rb",
