@@ -1,5 +1,5 @@
 # This ISNT actually the Flesch Index, but actually the syllable rules
-# used when calculated the Flesch Index
+# used when calculating the Flesch Index
 # Read more: http://portal.acm.org/citation.cfm?id=10583
 
 module NLPBackpack
