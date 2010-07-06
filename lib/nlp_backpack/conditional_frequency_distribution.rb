@@ -1,5 +1,11 @@
 module NLPBackpack
-
+  # = Conditional Frequency Distribution
+  # Example:
+  #
+  # speeches = {:speech_a => %w(trol lol lol lol), :speech_b => %w(facebook makes you pregnant)}
+  # events = %w(lol makes)
+  # cfd = NLPBackPack::ConditionalFrequencyDistributions.new(speeches, *events)
+  # cfd.process => {:speech_a => {lol => 3, :makes => 0}, :speech_b => {:lol => 0, :makes => 1}}
   class ConditionalFrequencyDistribution
     def initialize(conditions, *events)
       @conditions = conditions
@@ -10,6 +16,7 @@ module NLPBackpack
       @results ||= calculate_cfd
     end
 
+    # Returns a pretty table output
     def inspect
       data = "\t#{@events.join("\t")}\n"
 
