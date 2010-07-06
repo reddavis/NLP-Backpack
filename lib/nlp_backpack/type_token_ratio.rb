@@ -1,12 +1,16 @@
 require 'nlp_backpack/tokenizers/word'
 
 module NLPBackpack
-
-  # number of unique words / number of words * 100
+  # = Type Token Ratio
+  # Number of unique words / number of words * 100
+  # Example:
+  #
+  # text = "hello there"
+  # TypeTokenRatio.analyze(text) => result
   class TypeTokenRatio
     class << self
       def analyze(text)
-        new(text).result
+        new(text).process
       end
     end
 
@@ -14,7 +18,7 @@ module NLPBackpack
       @text = prepare_text(text)
     end
 
-    def result
+    def process
       (unique_words / total_words) * 100
     end
 
