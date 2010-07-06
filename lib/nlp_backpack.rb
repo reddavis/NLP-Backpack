@@ -12,4 +12,5 @@ module NLPBackpack
   autoload :Tokenizer, "nlp_backpack/tokenizer"
   autoload :LexicalDensity, "nlp_backpack/lexical_density"
   autoload :Syllable, "nlp_backpack/syllable"
+  autoload :GunningFogIndex, "nlp_backpack/gunning_fog_index"
 end
