@@ -26,12 +26,10 @@ module NLPBackpack
       end
 
       def results_for(correct_result, test_result)
-        results[results_key(correct_result, test_result)]
+        process[results_key(correct_result, test_result)]
       end
 
-      private
-
-      def results
+      def process
         @results ||= begin
           results = Hash.new {|h,k| h[k] = 0.0}
 
@@ -48,6 +46,8 @@ module NLPBackpack
           results
         end
       end
+
+      private
 
       def results_key(correct_result, test_result)
         "#{correct_result}_#{test_result}"

@@ -6,22 +6,20 @@ module NLPBackpack
     class Accuracy < Base
 
       def accuracy_of(klass)
-        results[klass]
+        process[klass]
       end
 
       def inspect
         output = ""
 
-        results.each do |klass, result|
+        process.each do |klass, result|
           output << "#{klass}: #{result}% correct\n"
         end
 
         output
       end
 
-      private
-
-      def results
+      def process
         @results ||= begin
           correct_klass_count = Hash.new {|h,k| h[k] = 0.0}
           total_klass_count = Hash.new {|h,k| h[k] = 0.0}
