@@ -7,6 +7,9 @@ module NLPBackpack
   autoload :GunningFogIndex, "nlp_backpack/gunning_fog_index"
   autoload :TypeTokenRatio, "nlp_backpack/type_token_ratio"
 
+  # Errors
+  autoload :Error, "nlp_backpack/error"
+
   module Chunker
     autoload :RegexChunker, "nlp_backpack/chunkers/regex_chunker"
   end
