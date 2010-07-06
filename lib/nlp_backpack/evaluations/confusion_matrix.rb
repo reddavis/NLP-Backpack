@@ -2,8 +2,13 @@ require 'nlp_backpack/evaluation/base'
 
 module NLPBackpack
   module Evaluation
-
+    # = Confusion Matrix
+    # Example:
+    #
+    # correct_results, test_results = [1,2,3], [3,2,1]
+    # cm = NLPBackpack::ConfusionMatrix.new(correct_results, test_results)
     class ConfusionMatrix < Base
+      # Pretty matrix output
       def inspect
         output = "rows: correct results; cols: test results\n\n"
         output << "\t" + all_unique_results.map {|x| "#{x}"}.join("\t") + "\n"
@@ -25,10 +30,12 @@ module NLPBackpack
         output
       end
 
+      # Returns a specific cell from the confusion matrix
       def results_for(correct_result, test_result)
         process[results_key(correct_result, test_result)]
       end
 
+      # Returns a hash of confusions
       def process
         @results ||= begin
           results = Hash.new {|h,k| h[k] = 0.0}
