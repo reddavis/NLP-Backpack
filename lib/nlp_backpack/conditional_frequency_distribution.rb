@@ -12,6 +12,7 @@ module NLPBackpack
       @events = events
     end
 
+    # Returns a hash of each condition with their event result
     def process
       @results ||= calculate_cfd
     end

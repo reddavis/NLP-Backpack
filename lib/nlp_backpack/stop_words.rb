@@ -1,5 +1,10 @@
 module NLPBackpack
-
+  # = Stop Words
+  # A basic list of stop words.
+  #
+  # Example:
+  #
+  # NLPBackpack::StopWords.all => Array of stop words
   class StopWords
     class << self
       def all
