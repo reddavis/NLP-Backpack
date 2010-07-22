@@ -11,7 +11,7 @@
 # However, when classifying, P(Item) is the same across all calcualtions
 # So we don't bother to calculate it
 
-require "nlp_backpack/classifier/base"
+require "nlp_backpack/classifiers/base"
 
 module NLPBackpack
   module Classifier
