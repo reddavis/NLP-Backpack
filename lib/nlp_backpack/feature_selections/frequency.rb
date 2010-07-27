@@ -10,8 +10,6 @@ module NLPBackpack
         #=> {:class => {'term' => count, 'term' => count}}
         @results = {}
 
-        # For logger
-        total_calculations = classes.size * terms.size
         n = 1
 
         classes.each do |klass|

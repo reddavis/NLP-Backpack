@@ -2,6 +2,14 @@ module NLPBackpack
   module FeatureSelection
 
     class Base
+
+      # Input Example
+      #
+      # data = {
+      #         :spam => [['this', 'is', 'some', 'information'], ['this', 'is', 'something', 'that', 'is', 'information']],
+      #         :ham => [['this', 'test', 'some', 'more', 'information'], ['there', 'are', 'some', 'things']],
+      #         }
+      #
       def initialize(data, options={})
         @data = data
       end
