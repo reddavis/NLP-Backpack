@@ -3,7 +3,7 @@
 # The patterns are made up of Tag Patterns.
 # (DT)?(JJ.*)* == Optional determiner, followed by zero or more of any type of adjective.
 
-require 'nlp_backpack/chunker/tag_pattern'
+require 'nlp_backpack/chunkers/tag_pattern'
 
 module NLPBackpack
 

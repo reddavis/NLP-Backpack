@@ -1,4 +1,4 @@
-require 'nlp_backpack/evaluation/base'
+require 'nlp_backpack/evaluations/base'
 
 module NLPBackpack
   module Evaluation

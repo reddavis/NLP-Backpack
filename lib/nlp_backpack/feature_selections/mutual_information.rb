@@ -13,7 +13,7 @@
 # n(0,0) = count documents that do not contain term and do not belong to specfied class
 # n = n(1,1) + n(0,1) + n(1,0) + n(0,0)
 
-require 'nlp_backpack/feature_selection/base'
+require 'nlp_backpack/feature_selections/base'
 
 module NLPBackpack
   module FeatureSelection

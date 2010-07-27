@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'rubygems'
 require 'nlp_backpack'
+require 'rubygems'
 require 'spec'
 require 'spec/autorun'
 
@@ -21,7 +21,7 @@ module Evaluation
   end
 end
 
-module FeatureSelection
+module FeatureSelectionData
   def self.data
     {
     :spam => [['this', 'is', 'this', 'some', 'yer', 'information'], ['this', 'is', 'something', 'that', 'is', 'information']],

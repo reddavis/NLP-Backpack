@@ -1,4 +1,4 @@
-require 'nlp_backpack/feature_selection/base'
+require 'nlp_backpack/feature_selections/base'
 
 module NLPBackpack
   module FeatureSelection
@@ -10,21 +10,14 @@ module NLPBackpack
         #=> {:class => {'term' => count, 'term' => count}}
         @results = {}
 
-        n = 1
-
         classes.each do |klass|
-          @results[klass] = {}
+          @results[klass] = Hash.new {|h,k| h[k] = 0 }
 
-          terms.each do |term|
-            n += 1
-
-            if @results[klass].key?(term)
-              @results[klass][term] += 1
-            else
-              @results[klass][term] = 1
-            end
-          end #terms.each
+          @data[klass].flatten.each do |term|
+            @results[klass][term] += 1
+          end
         end #classes.each
+
         @results
       end
 

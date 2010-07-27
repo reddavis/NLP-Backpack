@@ -2,7 +2,6 @@ module NLPBackpack
   module FeatureSelection
 
     class Base
-
       # Input Example
       #
       # data = {

@@ -2,7 +2,7 @@
 # whether the two events are dependent. If they are, then the occurance
 # of the term makes the occurance of the class more or less likely
 
-require 'nlp_backpack/feature_selection/base'
+require 'nlp_backpack/feature_selections/base'
 
 module NLPBackpack
   module FeatureSelection

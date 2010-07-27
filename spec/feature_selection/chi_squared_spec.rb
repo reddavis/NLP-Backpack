@@ -5,7 +5,7 @@ include NLPBackpack::FeatureSelection
 describe ChiSquared do
 
   before do
-    @a = ChiSquared.new(FeatureSelection.data)
+    @a = ChiSquared.new(FeatureSelectionData.data)
   end
 
   it "should return an hash" do

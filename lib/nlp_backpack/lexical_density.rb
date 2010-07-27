@@ -1,5 +1,5 @@
-require 'nlp_backpack/tokenizer'
-require 'nlp_backpack/pos'
+require 'nlp_backpack/tokenizers/word'
+require 'nlp_backpack/pos/brill_tagger'
 
 module NLPBackpack
 

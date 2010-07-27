@@ -1,5 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
-require 'nlp_backpack/chunker/tag_pattern'
+require 'nlp_backpack/chunkers/tag_pattern'
 
 include NLPBackpack
 

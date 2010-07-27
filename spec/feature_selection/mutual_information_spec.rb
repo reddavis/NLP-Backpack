@@ -5,7 +5,7 @@ include NLPBackpack::FeatureSelection
 describe MutualInformation do
 
   before do
-    @a = MutualInformation.new(FeatureSelection.data)
+    @a = MutualInformation.new(FeatureSelectionData.data)
   end
 
   it "should return an hash" do
